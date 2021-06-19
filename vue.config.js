@@ -61,9 +61,6 @@ module.exports = {
     //     symbolId: "icon-[name]"
     //   })
     //   .end();
-    config.set("externals", {
-      swiper: "Swiper"
-    });
 
     config.when(process.env.NODE_ENV !== "development", config => {
       // config.plugin("analyzer").use(new BundleAnalyzerPlugin());

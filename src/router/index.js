@@ -49,16 +49,6 @@ export const asyncRoutes = [
         meta: { title: '个人信息', icon: 'el-icon-user', noCache: true }
       },
       {
-        path: 'swiper',
-        name: 'Swiper',
-        component: () => import('@/views/manage/swiper'),
-        meta: {
-          title: '轮播图',
-          icon: 'el-icon-picture-outline',
-          roles: ['admin']
-        }
-      },
-      {
         path: 'scheme',
         name: 'Scheme',
         component: () => import('@/views/manage/scheme'),
