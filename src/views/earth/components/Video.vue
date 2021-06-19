@@ -1,6 +1,6 @@
 <template>
   <div>
-      <video src=""></video>
+      <video src=".mp4"></video>
   </div>
 </template>
 
