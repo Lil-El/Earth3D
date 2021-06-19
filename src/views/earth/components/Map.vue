@@ -40,7 +40,9 @@ export default {
 
                     this.ESRI.graphicsLayer = new GraphicsLayer();
                     this.ESRI.map.add(this.ESRI.graphicsLayer);
-
+                    this.ESRI.view.on("click", (event)=>{
+                        console.log(event);
+                    })
                     this.ESRI.view.ui.remove(['navigation-toggle']);
                     this.ESRI.view.ui.move(['compass', 'zoom'], 'bottom-right');
                     res();
@@ -81,13 +83,13 @@ export default {
             });
         },
         addFactory(data = {}, isGoto = false) {
-            loadModules(['esri/Graphic'], this.esriOpt).then(([Graphic]) => {
+            loadModules(['esri/Graphic', "esri/geometry/SpatialReference"], this.esriOpt).then(([Graphic, SpatialReference]) => {
                 let graphic = new Graphic({
                     geometry: {
                         type: 'point',
-                        x: data.longitude,
-                        y: data.latitude,
-                        x: 10,
+                        latitude: data.latitude,
+                        longitude: data.longitude,
+                        // spatialReference: SpatialReference.WGS84
                     },
                     symbol: {
                         type: 'picture-marker',
@@ -101,11 +103,22 @@ export default {
                     popupTemplate: {
                         title: '{label}',
                         content: '{content}',
-                        actions: [],
+                        actions: [
+                            {
+                                title: "Video",
+                                id: "video-this",
+                                className: "esri-icon-navigation"
+                            }
+                        ],
                     },
                 });
+                this.ESRI.view.popup.on("trigger-action", function(event) {
+                    console.log(event);
+                    if (event.action.id === "video-this") {
+                    }
+                });
                 this.ESRI.graphicsLayer.add(graphic);
-                isGoto && this.ESRI.Map.goTo(graphic);
+                isGoto && this.ESRI.view.goTo(graphic);
             });
         },
         //   this.ESRI.areaGroup.removeAll();

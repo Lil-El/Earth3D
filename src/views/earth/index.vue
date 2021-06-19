@@ -65,7 +65,7 @@ export default {
         },
         handleNodeClick(node) {
             let { key } = node;
-            this.$refs.MAP.renderAreaLayer(key);
+            key && this.$refs.MAP.renderAreaLayer(key);
             node.type === "factory" && this.$refs.MAP.addFactory(node, true);
         },
     },
