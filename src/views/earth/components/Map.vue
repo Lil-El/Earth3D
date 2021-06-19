@@ -7,7 +7,7 @@ import { loadModules } from 'esri-loader';
 export default {
     data() {
         return {
-            ESRI: { map: null, view: null, areaGroup: null },
+            ESRI: { map: null, view: null, areaGroup: null, graphicsLayer: null },
             esriOpt: {
                 url: 'https://js.arcgis.com/4.15/',
                 css: 'https://js.arcgis.com/4.15/esri/themes/light/main.css',
@@ -23,12 +23,12 @@ export default {
                 const esriModule = [
                     'esri/Map',
                     'esri/views/SceneView',
-                    'esri/layers/GeoJSONLayer',
                     'esri/layers/GroupLayer',
+                    'esri/layers/GraphicsLayer',
                 ];
-                loadModules(esriModule, this.esriOpt).then(([Map, SceneView, GeoJSONLayer, GroupLayer]) => {
+                loadModules(esriModule, this.esriOpt).then(([Map, SceneView, GroupLayer, GraphicsLayer]) => {
                     this.ESRI.map = new Map({
-                        basemap: 'streets',
+                        basemap: 'satellite',
                         ground: 'world-elevation',
                     });
                     this.ESRI.areaGroup = new GroupLayer();
@@ -37,6 +37,10 @@ export default {
                         map: this.ESRI.map,
                     });
                     this.ESRI.map.add(this.ESRI.areaGroup);
+
+                    this.ESRI.graphicsLayer = new GraphicsLayer();
+                    this.ESRI.map.add(this.ESRI.graphicsLayer);
+
                     this.ESRI.view.ui.remove(['navigation-toggle']);
                     this.ESRI.view.ui.move(['compass', 'zoom'], 'bottom-right');
                     res();
@@ -74,6 +78,34 @@ export default {
                         resolve();
                     });
                 }
+            });
+        },
+        addFactory(data = {}, isGoto = false) {
+            loadModules(['esri/Graphic'], this.esriOpt).then(([Graphic]) => {
+                let graphic = new Graphic({
+                    geometry: {
+                        type: 'point',
+                        x: data.longitude,
+                        y: data.latitude,
+                        x: 10,
+                    },
+                    symbol: {
+                        type: 'picture-marker',
+                        url: 'https://developers.arcgis.com/javascript/latest/sample-code/satellites-3d/live/satellite.png',
+                        width: 48,
+                        height: 48,
+                    },
+                    attributes: {
+                        ...data,
+                    },
+                    popupTemplate: {
+                        title: '{label}',
+                        content: '{content}',
+                        actions: [],
+                    },
+                });
+                this.ESRI.graphicsLayer.add(graphic);
+                isGoto && this.ESRI.Map.goTo(graphic);
             });
         },
         //   this.ESRI.areaGroup.removeAll();

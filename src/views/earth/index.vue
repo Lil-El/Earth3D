@@ -66,6 +66,7 @@ export default {
         handleNodeClick(node) {
             let { key } = node;
             this.$refs.MAP.renderAreaLayer(key);
+            node.type === "factory" && this.$refs.MAP.addFactory(node, true);
         },
     },
 };
@@ -104,7 +105,7 @@ export default {
 }
 .tree-wrap {
     $color1: #26282c; // parent
-    $color2: #0e0e0e; // child & checked
+    $color2: #1d1d1d; // child & checked
     $color3: #444444; // hover
     left: 20px;
     top: 20px;
