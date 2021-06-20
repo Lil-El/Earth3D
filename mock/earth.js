@@ -13,8 +13,7 @@ const request = require('request');
     }
  */
 // const areaData = require("../public/areaData.json");
-
-const ip = "http://127.0.0.1:8080";
+const ip = process.env.VUE_APP_EARTH_IP;
 let areaData = [];
 request.get(ip+'/areaData.json', {}, (err, res) => {
     if (err) return void 0;
