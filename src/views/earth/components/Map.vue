@@ -199,8 +199,15 @@ export default {
                             popupTemplate: {
                                 title: '{label}',
                                 content: `
-                                    <div style="margin-bottom: 6px;"><span style="font-weight: bold;">投资主体：</span>{Investors}</div>
-                                    <img src="${this.httpUrl}/pupup-content.jpg" />
+                                    <div style="margin-bottom: 6px;">
+                                        <span style="font-weight: bold;">企业简称：</span><span>{AKA}</span>
+                                    </div>
+                                    <div style="margin-bottom: 6px;">
+                                        <span style="font-weight: bold;">企业名称：</span><span>{label}</span>
+                                    </div>
+                                    <div style="margin-bottom: 6px;">
+                                        <span style="font-weight: bold;">投资主体：</span><span>{Investors}</span>
+                                    </div>
                                 `,
                                 actions:
                                     (data.link && [

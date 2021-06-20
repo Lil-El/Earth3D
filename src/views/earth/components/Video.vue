@@ -1,6 +1,6 @@
 <template>
     <div class="video" v-show="url">
-        <video muted autoplay controls :src="url"></video>
+        <iframe :src="url"></iframe>
     </div>
 </template>
 
@@ -13,14 +13,20 @@ export default {
     },
     methods: {
         setPlayUrl(link) {
-            this.url = require('../../../assets/' + link);
+            this.url = link;
         },
     },
 };
 </script>
 
 <style lang="scss" scoped>
-.video > video {
-    width: 100%;
+.video {
+    background-color: #ccc;
+    height: 230px;
+    iframe {
+        border: none;
+        width: 100%;
+        height: 230px;
+    }
 }
 </style>
