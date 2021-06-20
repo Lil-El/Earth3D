@@ -1,70 +1,25 @@
-const areaData = [
-    {
-        id: '1',
-        type: 'intercontinental', // 洲际
-        label: '亚洲',
-        children: [
-            {
-                id: '11',
-                type: 'nation', // 国家
-                key: 'CHN',
-                label: '中国',
-                children: [
-                    {
-                        id: '111',
-                        type: 'province', // 省
-                        key: 'SX',
-                        label: '陕西',
-                        children: [
-                            {
-                                id: '1111',
-                                type: 'factory', // 工厂
-                                label: '爱德华仪器制造厂',
-                                latitude: 34.194891521232776,
-                                longitude: 108.86307109806822,
-                                address: '陕西省西安市雁塔区丈八五路爱德华仪器制造厂',
-                                content: '实例的开发就实力坑爹房间数量快递费交流可圣诞节弗兰克圣诞节弗兰克',
-                                telephone: '150xxxx0351',
-                                concat: '刘先生',
-                            },
-                        ],
-                    },
-                ],
-            },
-            {
-                id: '12',
-                type: 'nation',
-                key: 'RUS',
-                label: '俄罗斯',
-                children: [],
-            },
-        ],
-    },
-    {
-        id: '2',
-        type: 'intercontinental',
-        label: '欧洲',
-        children: [],
-    },
-    {
-        id: '3',
-        type: 'intercontinental',
-        label: '北美洲',
-        children: [],
-    },
-    {
-        id: '4',
-        type: 'intercontinental',
-        label: '南美洲',
-        children: [],
-    },
-    {
-        id: '5',
-        type: 'intercontinental',
-        label: '非洲',
-        children: [],
-    },
-];
+const request = require('request');
+/**
+ * 数据的格式：
+ * {
+        id: '乌兹别克斯坦费尔干纳亚星建筑材料有限公司', // id：保证唯一
+        type: 'factory',
+        label: '乌兹别克斯坦费尔干纳亚星建筑材料有限公司', // 企业名称
+        AKA: '祥盛实业', // 简称
+        latitude: 41.534714, // 项目坐标
+        longitude: 64.448432, // 项目坐标
+        Investors: '陕西祥盛实业集团有限公司', // 投资主体
+        link: 'frag_bunny.mp4', // 视频在assets目录的名字
+    }
+ */
+// const areaData = require("../public/areaData.json");
+
+const ip = "http://127.0.0.1:8080";
+let areaData = [];
+request.get(ip+'/areaData.json', {}, (err, res) => {
+    if (err) return void 0;
+    areaData = JSON.parse(res.body);
+});
 
 module.exports = [
     {

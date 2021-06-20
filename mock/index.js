@@ -1,13 +1,9 @@
 const Mock = require("mockjs");
 const { param2Obj } = require("./utils");
 
-const user = require("./user");
-const role = require("./role");
-const article = require("./article");
-const search = require("./remote-search");
 const earth = require("./earth");
 
-const mocks = [...user, ...role, ...article, ...search, ...earth];
+const mocks = [...earth];
 
 function mockXHR() {
   // mock patch

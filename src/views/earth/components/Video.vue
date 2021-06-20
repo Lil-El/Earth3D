@@ -1,17 +1,26 @@
 <template>
-  <div>
-      <video src=".mp4"></video>
-  </div>
+    <div class="video" v-show="url">
+        <video muted autoplay controls :src="url"></video>
+    </div>
 </template>
 
 <script>
 export default {
-    data(){
-        return {}
-    }
-}
+    data() {
+        return {
+            url: '',
+        };
+    },
+    methods: {
+        setPlayUrl(link) {
+            this.url = require('../../../assets/' + link);
+        },
+    },
+};
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.video > video {
+    width: 100%;
+}
 </style>

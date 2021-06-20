@@ -1,0 +1,295 @@
+[
+    {
+        "id": "1",
+        "type": "intercontinental",
+        "label": "亚洲",
+        "children": [
+            {
+                "id": "AFG",
+                "type": "nation",
+                "key": "AFG",
+                "label": "阿富汗",
+                "children": []
+            },
+            {
+                "id": "UZB",
+                "type": "nation",
+                "key": "UZB",
+                "label": "乌兹别克斯坦",
+                "children": [
+                    {
+                        "id": "乌兹别克斯坦费尔干纳亚星建筑材料有限公司",
+                        "type": "factory",
+                        "label": "乌兹别克斯坦费尔干纳亚星建筑材料有限公司",
+                        "AKA": "祥盛实业",
+                        "latitude": 41.534714,
+                        "longitude": 64.448432,
+                        "Investors": "陕西祥盛实业集团有限公司",
+                        "link": "frag_bunny.mp4"
+                    }
+                ]
+            },
+
+            {
+                "id": "11",
+                "type": "nation",
+                "key": "CHN",
+                "label": "中国",
+                "children": []
+            },
+            {
+                "id": "IND",
+                "type": "nation",
+                "key": "IND",
+                "label": "印度",
+                "children": []
+            },
+            {
+                "id": "JPN",
+                "type": "nation",
+                "key": "JPN",
+                "label": "日本",
+                "children": []
+            },
+            {
+                "id": "KAZ",
+                "type": "nation",
+                "key": "KAZ",
+                "label": "哈萨克斯坦",
+                "children": [
+                    {
+                        "id": "特爱有限责任公司",
+                        "type": "factory",
+                        "label": "特爱有限责任公司",
+                        "AKA": "爱菊粮油",
+                        "latitude": 48.036737,
+                        "longitude": 67.375568,
+                        "Investors": "西安爱菊粮油工业集团有限公司",
+                        "link": "frag_bunny.mp4"
+                    }
+                ]
+            },
+            {
+                "id": "MYS",
+                "type": "nation",
+                "key": "MYS",
+                "label": "马来西亚",
+                "children": [
+                    {
+                        "id": "陕建股份马来西亚（马六甲）有限公司",
+                        "type": "factory",
+                        "label": "陕建股份马来西亚（马六甲）有限公司",
+                        "AKA": "华山国际",
+                        "latitude": 2.286956,
+                        "longitude": 102.282941,
+                        "Investors": "华山国际工程有限公司/陕西建工集团股份有限公司",
+                        "link": "frag_bunny.mp4"
+                    }
+                ]
+            },
+            {
+                "id": "THA",
+                "type": "nation",
+                "key": "THA",
+                "label": "泰国",
+                "children": [
+                    {
+                        "id": "延长橡胶（泰国）有限公司",
+                        "type": "factory",
+                        "label": "延长橡胶（泰国）有限公司",
+                        "AKA": "延长石油",
+                        "latitude": 16.485678,
+                        "longitude": 100.960258,
+                        "Investors": "陕西延长石油西北橡胶有限责任公司/陕西延长石油（集团）有限责任公司",
+                        "link": "video2.mp4"
+                    },
+                    {
+                        "id": "法士特汽车传动（泰国）有限公司",
+                        "type": "factory",
+                        "label": "法士特汽车传动（泰国）有限公司",
+                        "AKA": "法士特",
+                        "latitude": 12.68563,
+                        "longitude": 101.2891,
+                        "Investors": "陕西法士特齿轮有限责任公司",
+                        "link": "video2.mp4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "type": "intercontinental",
+        "label": "欧洲",
+        "children": [
+            {
+                "id": "ALB",
+                "type": "nation",
+                "key": "ALB",
+                "label": "阿尔巴尼亚",
+                "children": []
+            },
+            {
+                "id": "ATF",
+                "type": "nation",
+                "key": "ATF",
+                "label": "法国",
+                "children": []
+            },
+            {
+                "id": "AUT",
+                "type": "nation",
+                "key": "AUT",
+                "label": "奥地利",
+                "children": []
+            },
+            {
+                "id": "BEL",
+                "type": "nation",
+                "key": "BEL",
+                "label": "比利时",
+                "children": []
+            },
+            {
+                "id": "BGR",
+                "type": "nation",
+                "key": "BGR",
+                "label": "保加利亚",
+                "children": []
+            },
+            {
+                "id": "BLR",
+                "type": "nation",
+                "key": "BLR",
+                "label": "白俄罗斯",
+                "children": []
+            },
+            {
+                "id": "CHE",
+                "type": "nation",
+                "key": "CHE",
+                "label": "瑞士",
+                "children": []
+            },
+            {
+                "id": "GBR",
+                "type": "nation",
+                "key": "GBR",
+                "label": "英国",
+                "children": []
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "type": "intercontinental",
+        "label": "大洋洲",
+        "children": [
+            {
+                "id": "AUS",
+                "type": "nation",
+                "key": "AUS",
+                "label": "澳大利亚",
+                "children": []
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "type": "intercontinental",
+        "label": "北美洲",
+        "children": [
+            {
+                "id": "BHS",
+                "type": "nation",
+                "key": "BHS",
+                "label": "巴哈马",
+                "children": []
+            },
+            {
+                "id": "CAN",
+                "type": "nation",
+                "key": "CAN",
+                "label": "加拿大",
+                "children": []
+            },
+            {
+                "id": "USA",
+                "type": "nation",
+                "key": "USA",
+                "label": "美国",
+                "children": []
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "type": "intercontinental",
+        "label": "南美洲",
+        "children": [
+            {
+                "id": "ARG",
+                "type": "nation",
+                "key": "ARG",
+                "label": "阿根廷",
+                "children": []
+            },
+            {
+                "id": "BOL",
+                "type": "nation",
+                "key": "BOL",
+                "label": "玻利维亚",
+                "children": []
+            },
+            {
+                "id": "BRA",
+                "type": "nation",
+                "key": "BRA",
+                "label": "巴西",
+                "children": []
+            },
+            {
+                "id": "CUB",
+                "type": "nation",
+                "key": "CUB",
+                "label": "古巴",
+                "children": []
+            },
+            {
+                "id": "PAN",
+                "type": "nation",
+                "key": "PAN",
+                "label": "巴拿马",
+                "children": []
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "type": "intercontinental",
+        "label": "非洲",
+        "children": [
+            {
+                "id": "AGO",
+                "type": "nation",
+                "key": "AGO",
+                "label": "安哥拉",
+                "children": []
+            },
+            {
+                "id": "BDI",
+                "type": "nation",
+                "key": "BDI",
+                "label": "布隆迪",
+                "children": []
+            },
+            {
+                "id": "CAF",
+                "type": "nation",
+                "key": "CAF",
+                "label": "中非共和国",
+                "children": []
+            }
+        ]
+    }
+]
